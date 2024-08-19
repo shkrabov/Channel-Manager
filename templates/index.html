@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Telegram Channel Manager</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="logo">
+                <h1>🧐 TL;DR </h1>
+                <p>Сделаем длинный список каналов коротким и эффективным</p>
+            </div>
+            <div class="filters-container">
+                <div class="filter">
+                    <label for="minUnread">Мин. непрочитанных:</label>
+                    <input type="number" id="minUnread" min="0" placeholder="Мин">
+                </div>
+                <div class="filter">
+                    <label for="maxUnread">Макс. непрочитанных:</label>
+                    <input type="number" id="maxUnread" min="0" placeholder="Макс">
+                </div>
+            </div>
+            <div class="sort-container">
+                <label for="sort-select">Сортировка:</label>
+                <select id="sort-select">
+                    <option value="desc">Больше непрочитанных сверху</option>
+                    <option value="asc">Меньше непрочитанных сверху</option>
+                </select>
+            </div>
+            <div class="action-buttons">
+                <button id="unsubscribeSelected" class="btn btn-primary" disabled>Отписаться (0)</button>
+                <button id="cancelSelection" class="btn btn-secondary" disabled>Отменить выбор</button>
+            </div>
+        </aside>
+        <main>
+            <div id="channel-list" class="channel-list">
+                <!-- Каналы будут добавлены здесь динамически -->
+            </div>
+        </main>
+    </div>
+    <script src="/static/js/main.js"></script>
+</body>
+</html>
+
