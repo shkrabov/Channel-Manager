@@ -163,3 +163,5 @@ config.py
 *.session
 __pycache__/
 /static/avatars/
+Как запустить.txt
+anon.session-journal
